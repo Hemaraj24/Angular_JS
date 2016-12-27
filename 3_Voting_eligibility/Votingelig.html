@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="lib/angular.min.js"  >
+    </script>
+    <script src="assignt14.js" >
+    </script>
+</head>
+<body align="center" ng-app="votingEligibilityApp">
+    <center><h2>Voting Eligibility Test</h2></center>
+    <div ng-controller="votingEligibility">
+        Salutation: <select ng-model="sal" ng-options=" x for x in salutation">{{salutation}}
+                    </select><br/><br/>
+        Enter your Name:  <input type="text" ng-model="user.name"/><br/><br/>
+        
+        Please choose your age: <select ng-model="userAge" ng-options="number for number in numbers">{{number}}
+                                </select> <br/><br/>
+        <button ng-click="eligibility();" >Check</button><br/><br/>
+        <b><span ng-show="showMsg">
+            Hey {{sal}} {{user.name}} your age is {{userAge}} , you are {{msg}} for voting!</span></b>
+     </div>
+</body>
+</html>

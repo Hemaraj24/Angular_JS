@@ -1,0 +1,70 @@
+<html>
+<head>
+    <script src="lib/angular.min.js"  >
+    </script>
+<!--
+    <script src="assignt15service.js" >
+    </script>
+-->
+    <script src="assignt15app.js" >
+    </script>
+     
+</head>
+<body align="center" ng-app="studentApp">
+    <center><h2>Student Information</h2></center>
+
+    <div ng-controller="selectStudent">
+        Select Student: <select ng-model="selectOption" ng-options=" x for x in select" >{{select}}
+                        </select><br/><br/>
+        <button ng-click="showSection();" >Show Details</button><br/><br/>    
+    
+        <!--  School Student  -->
+        <div ng-show="schoolStudent">
+        <center><h2>School Student </h2></center> 
+        Maths: <input type="text" ng-model="user.maths"/><br/>
+        Science: <input type="text" ng-model="user.science"/><br/>
+        English: <input type="text" ng-model="user.english"/><br/><br/>
+        <button ng-click="calculateTotal();" >Submit</button><br/><br/>
+        <b>TotalMarks:{{totalMarks}}</b><br/>
+        </div>
+        
+        <!--  College Student   -->
+        <div ng-show="collegeStudent">
+        <center><h2>College Student </h2></center> 
+        Select Stream: <select ng-model="streamOption" ng-options=" x for x in stream">{{stream}}
+                        </select><br/><br/>
+        <button ng-click="subOption();" >Search</button><br/><br/> 
+        </div>
+                 <!--  Electrical Engineering -->
+                    <div ng-show="electricalEng">
+                     <center><h4> Electrical Engineering </h4></center> 
+                    E1: <input type="text" ng-model="ee.e1"/><br/>
+                    E2: <input type="text" ng-model="ee.e2"/><br/>
+                    E3: <input type="text" ng-model="ee.e3"/><br/><br/>
+                    <button ng-click="electricalTotal();" >Submit</button><br/><br/>
+                    <b>TotalMarks:{{eleTotal}}</b><br/>
+                    </div>
+
+                <!--  Computer Engineering --> 
+                    <div ng-show="computerEng">
+                    <center><h4> Computer Engineering </h4></center> 
+                    C1: <input type="text" ng-model="ce.c1"/><br/>
+                    C2: <input type="text" ng-model="ce.c2"/><br/>
+                    C3: <input type="text" ng-model="ce.c3"/><br/><br/>
+                    <button ng-click="computerTotal();" >Submit</button><br/><br/>
+                    <b>TotalMarks:{{compTotal}}</b><br/>
+                    </div>
+
+                <!--  Mechanical Engineering  -->
+                    <div ng-show="mechanicalEng">
+                    <center><h4>Mechanical Engineering </h4></center> 
+                    M1: <input type="text" ng-model="me.m1"/><br/>
+                    M2: <input type="text" ng-model="me.m2"/><br/>
+                    M3: <input type="text" ng-model="me.m3"/><br/><br/>
+                    <button ng-click="mechanicalTotal();" >Submit</button><br/><br/>
+                    <b>TotalMarks:{{mechTotal}}</b><br/>
+                    </div>
+    
+</div>
+</body>
+</html>

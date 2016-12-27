@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="custom.css" rel="stylesheet">
+        <script src="jquery.min.js">
+        </script>
+        <script src="angular.min.js">
+        </script>
+        <script src="angular-route.min.js">
+        </script>
+        <script src="trail.js" >
+        </script>
+
+<body ng-app="studentInfoApp">
+<center><h1>Student Information</h1></center>
+<h4>Select an Option</h4>
+    <div class="container">
+        <a href="#/collegestd" class="btn btn-primary">List college Student</a>
+        <a href="#/schoolstd"  class="btn btn-primary">List School Student</a>
+    </div>
+<div ng-view></div>
+
+</body>
+</html>

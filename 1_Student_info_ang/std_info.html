@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <script src="lib/angular.min.js"  >
+        </script>
+        <script src="assignt12.js" >
+        </script>
+		   
+	</head>
+	<body ng-app="studentInfoApp">
+        <center><h2>Student Information</h2></center>
+		
+		<div style: align="center" ng-controller="studentinfo">
+            First Name:  <b>{{user.firstname}}</b> <br/>
+            Last Name:  <b>{{user.lastname}}</b><br/>
+            Roll No:  <b>{{user.roll}}</b><br/>
+            Maths: {{user.maths}}<br/>
+            Science: {{user.science}}<br/>
+            English: {{user.english}}<br/><br/>
+           <b> Total Marks: {{user.maths+user.science+user.english}} </b>
+           
+        </div>
+	</body>
+</html>
+
+ 
